@@ -5,7 +5,7 @@ configDotenv();
 
 export const Restart = () => {
   cron.schedule(
-    "*/1 * * * *",
+    "*/14 * * * *",
     async () => {
       const response = await axios.get(process.env.SERVER_URL);
       console.log(response.data.message);
