@@ -10,7 +10,7 @@ const model = genAI.getGenerativeModel({
 
 export const genContent = async (prompt) => {
   try {
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent(process.env.UTIL_TEXT + " "+ prompt);
     return result.response.text();
   } catch (error) {
     throw error;
